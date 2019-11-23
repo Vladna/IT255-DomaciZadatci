@@ -1,0 +1,18 @@
+h1 {
+
+color:yellow;
+border:2px solid black;
+}
+body { 
+    background-color:#BFC9CA ;
+}
+.content{
+
+    max-width: 550px;
+    margin:auto;
+}
+.for { 
+   font-size :20px;
+
+
+}
