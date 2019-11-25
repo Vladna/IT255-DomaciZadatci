@@ -1,0 +1,150 @@
+body{
+    background-color:white;
+}
+
+.logo {
+    font-style: normal;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.logo:hover{
+    transform: scale(1.25) ;
+    transition-duration: 1s  ;
+}
+#kola {
+    
+   display: flex;
+    justify-content: space-evenly ;
+    padding-top: 40px;
+  
+}
+.main{
+    position:relative;
+}
+
+.s:hover{
+    transform: scale(1.25) ;
+    transition-duration: 1s  ;visibility: visible;
+    
+}
+
+.e:hover{
+    transform: scale(1.25) ;
+    transition-duration: 1s  ;
+    
+    }
+.x:hover{
+    transform: scale(1.25) ;
+    transition-duration: 1s  ;
+        
+        }
+.y:hover{
+    transform: scale(1.25) ;
+    transition-duration: 1s  ;
+    
+            
+            }
+                        
+.s:hover p{
+    color:red;
+    visibility:visible;
+    
+    
+}
+
+.e:hover p{
+    color:red;
+    visibility:visible;
+}
+.x:hover p{
+    color:red;
+    visibility:visible;
+}
+.y:hover p{
+    color:red;
+    visibility:visible;
+}
+.s:hover img{
+    opacity: 0.2;
+    transition-duration: 1s  ;
+    
+}
+.e:hover img{
+    opacity: 0.2;
+    transition-duration: 1s  ;
+    
+}
+
+.x:hover img{
+    opacity: 0.2;
+    transition-duration: 1s  ;
+    
+}
+.y:hover img{
+    opacity: 0.2;
+    transition-duration: 1s  ;
+    
+}
+
+
+.text {
+visibility: hidden;
+font-size: 30px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+  }
+.kola-katalog{
+   
+    
+    
+}
+.smodel{
+    
+    display: flex;
+    justify-content: space-evenly ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:#909497 ;
+}
+.emodel{
+    
+    display: flex;
+    justify-content: space-evenly ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:#909497 ;
+    height: 600px;
+}
+.xmodel{
+   
+    display: flex;
+    justify-content: space-evenly ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:#909497 ;
+    height: 600px;
+}
+.xmodel p{
+    margin-top: 180px;
+}
+.ymodel{
+  
+    display: flex;
+    justify-content: space-evenly ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:#909497 ;
+    height: 800px;
+}.ymodel p{
+    margin-top: 180px;
+}
