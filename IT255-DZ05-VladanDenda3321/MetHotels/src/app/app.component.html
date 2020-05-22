@@ -1,0 +1,36 @@
+<div class="glavni-panel"> 
+  <h1>Hotel</h1>
+  <form class="form-unos">
+    <div class="form-group">
+      <label for="brSobe">Broj sobe</label>
+      <input type="number" class="form-control" id="brSobe" #brSobe>
+    </div>
+    <div class="form-group">
+      <label for="brKreveta">Broj kreveta</label>
+      <input type="number" class="form-control" id="brKreveta" #brKreveta>
+    </div>
+    <div class="form-group">
+      <label for="cena">Cena sobe</label>
+      <input type="number" class="form-control" id="cena" #cena>
+      <small id="cena" class="form-text text-muted">Cena sobe po nocenju</small>
+
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="dodajSobu(brSobe,brKreveta,cena)">Dodaj sobu</button>
+
+  </form>
+
+  
+  <div>
+    <label>Unesi max cenu sobe: </label>
+    
+    <input [(ngModel)]="price" class="form-control" placeholder="MAXCENA" />
+  </div>
+  <div  *ngFor="let soba of sobe | maxcena : price; index as i;">
+    
+  </div>
+<app-soba *ngFor="let soba of sobe | maxcena : price; index as i; "[soba]="soba">
+      
+    </app-soba>
+
+</div>
