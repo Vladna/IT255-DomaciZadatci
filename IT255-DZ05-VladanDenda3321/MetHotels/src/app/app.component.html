@@ -1,4 +1,4 @@
-<div class="glavni-panel"> 
+<div class="glavni-panel "> 
   <h1>Hotel</h1>
   <form class="form-unos">
     <div class="form-group">
@@ -26,9 +26,7 @@
     
     <input [(ngModel)]="price" class="form-control" placeholder="MAXCENA" />
   </div>
-  <div  *ngFor="let soba of sobe | maxcena : price; index as i;">
-    
-  </div>
+  
 <app-soba *ngFor="let soba of sobe | maxcena : price; index as i; "[soba]="soba">
       
     </app-soba>
