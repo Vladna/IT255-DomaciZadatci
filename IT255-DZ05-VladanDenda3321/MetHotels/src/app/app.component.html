@@ -2,7 +2,7 @@
   <h1>Hotel</h1>
   <form class="form-unos">
     <div class="form-group">
-      <label for="brSobe">Broj sobe</label>
+      <label for="brSobe">Broj nocenja</label>
       <input type="number" class="form-control" id="brSobe" #brSobe>
     </div>
     <div class="form-group">
@@ -27,8 +27,7 @@
     <input [(ngModel)]="price" class="form-control" placeholder="MAXCENA" />
   </div>
   
-<app-soba *ngFor="let soba of sobe | maxcena : price; index as i; "[soba]="soba">
+ <app-soba *ngFor="let soba of sobe | maxcena : price; index as i;"(roomToDelete)="izbrisiSobu($event)" (updateRoom)="izmeniSobu($event)" [soba]="soba"  ></app-soba> 
       
-    </app-soba>
 
 </div>

@@ -1,15 +1,18 @@
 <div class="containter pad">
-    <div class="row align-items-center soba">
-        <div class="col-sm">
-         Broj sobe: <b> {{soba?.brSobe}}</b>
-        </div>
-        <div class="col-sm">
-        Broj kreveta: <b>{{soba?.brKreveta}}</b> 
-        </div>
-        <div class="col-sm">
-        Cena sobe: <b>{{soba?.cena}}evra</b> 
-        </div>
-      </div>
+  <div class="row align-items-center soba">
+    <div class="col-sm">
+      Broj sobe: <b> {{soba?.brSobe}}</b>
+    </div>
+    <div class="col-sm">
+      Broj kreveta: <b>{{soba?.brKreveta}}</b>
+    </div>
+    <div class="col-sm">
+      Cena sobe: <b>{{soba?.cena}}evra</b>
+    </div>
+  <a href="#" (click)="changeContent()" class="btn btn-primary">IZMENI</a>
+              <a href="#" (click)="deleteRoom()" class="btn btn-danger">OBRISI</a>
+
+  </div>
 
 
 </div>

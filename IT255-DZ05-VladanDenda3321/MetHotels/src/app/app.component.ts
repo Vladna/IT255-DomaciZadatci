@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input } from '@angular/core';
 import {Soba} from './soba/soba.model';
 @Component({
   selector: 'app-root',
@@ -6,7 +6,7 @@ import {Soba} from './soba/soba.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sobe:Array<Soba>=[];
+  @Input () sobe: Soba[]=[] ;
  
 constructor(){}
   dodajSobu(brSobe: HTMLInputElement, brKreveta: HTMLInputElement,cena:HTMLInputElement): boolean {
@@ -16,9 +16,21 @@ constructor(){}
     cena.value='';
     return false;
   }
+
+  
   sortMaxCena(maksimalnaCena:HTMLInputElement){
   
 
   }
-
+  public izbrisiSobu(sobe: Soba) {
+    this.sobe = this.sobe.filter(item => {
+      return item.brSobe !== sobe.brSobe
+    })
+  }
+  public izmeniSobu(sobe: Soba) {
+    let index = this.sobe.findIndex(i => i.brSobe === sobe.brSobe);
+    
+    this.sobe[index].brSobe =Math.round((Math.random()*100)+1);
+  }
+  
 }
