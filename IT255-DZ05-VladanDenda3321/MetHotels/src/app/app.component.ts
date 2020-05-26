@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Soba } from './soba/soba.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { SobaServiceService } from './service/soba-service.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +10,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AppComponent {
   @Input() sobe: Soba[] = [];
 //izmena
-  constructor() { }
+  constructor(SobaService:SobaServiceService) {
+    this.sobe=[];
+
+   }
   dodajSobu(brSobe: HTMLInputElement, brKreveta: HTMLInputElement, cena: HTMLInputElement): boolean {
     this.sobe.push(new Soba(String(brSobe.value), Number(brKreveta.value), Number(cena.value)));
     brSobe.value = '';
@@ -44,4 +48,6 @@ export class AppComponent {
   onSubmit(){
     alert(JSON.stringify(this.form.value));
   }
+
+  
 }

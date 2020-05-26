@@ -1,4 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { SobaServiceService } from '../service/soba-service.service';
+
+
+describe('RoomServiceService', () => {
+  beforeEach(() => TestBed.configureTestingModule({}));
+
+  it('should be created', () => {
+    const service: SobaServiceService = TestBed.get(SobaServiceService);
+    expect(service).toBeTruthy();
+  });
+});
+
+/*import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SobaComponent } from './soba.component';
 
@@ -22,4 +35,4 @@ describe('SobaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+});*/

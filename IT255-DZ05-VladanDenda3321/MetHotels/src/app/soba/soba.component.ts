@@ -22,5 +22,8 @@ export class SobaComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  public getPrice( cena:number, brojsoba:number) {
+   let brojNoci = ((cena * brojsoba))
+    return brojNoci;
+  }
 }

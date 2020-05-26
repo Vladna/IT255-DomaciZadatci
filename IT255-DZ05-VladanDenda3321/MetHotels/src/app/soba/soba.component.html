@@ -9,7 +9,10 @@
     <div class="col-sm">
       Cena sobe: <b>{{soba?.cena}}evra</b>
     </div>
-    
+    <div class="col-sm">
+          Ukupna Cena: <b>{{getPrice(soba.cena, soba.brKreveta)}}€</b>
+    </div>
+
    <div class="col-sm"> <a href="#" (click)="changeContent()" class="btn btn-primary">IZMENI</a>
   <a href="#" (click)="deleteRoom()" class="btn btn-danger">OBRISI</a></div>
  

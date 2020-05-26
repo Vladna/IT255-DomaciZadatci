@@ -33,4 +33,5 @@ export class DodajSobuComponent implements OnInit {
     let video = new Soba(brojsobe, brojkreveta, cena);
     this.roomToAdd.emit(video);
   }
+  
 }
