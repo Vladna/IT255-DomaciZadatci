@@ -1,6 +1,6 @@
 import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
 import {Soba} from '../soba/soba.model';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-dodaj-sobu',
   templateUrl: './dodaj-sobu.component.html',
@@ -12,10 +12,21 @@ export class DodajSobuComponent implements OnInit {
   constructor() { 
    this.roomToAdd=new EventEmitter();
   }
-
   ngOnInit() {
+    this.initForm();
   }
-  public submitForm() {
+
+  public initForm() {
+    this.SobaForm = new FormGroup({
+      title: new FormControl('', [
+        Validators.required
+      ]),
+      link: new FormControl('', [
+        Validators.required
+      ])
+    });
+  }
+  public Form() {
     let brojsobe = this.SobaForm.get('brojsobe').value;
     let brojkreveta = this.SobaForm.get('brojkreveta').value;
     let cena = this.SobaForm.get('cena').value;

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SobaComponent } from './soba/soba.component';
 import { MaxcenaPipe } from './maxcena.pipe';
@@ -16,7 +16,8 @@ import { DodajSobuComponent } from './dodaj-sobu/dodaj-sobu.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
