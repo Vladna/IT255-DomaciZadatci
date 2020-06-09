@@ -1,0 +1,21 @@
+<div class="container mt-4 mb-4">
+  <div class=" mb-5">
+    <h3>PRETRAGA</h3>
+      <input [(ngModel)]="searchText" placeholder="pretraga">
+    </div>
+    <div class="mt-2 mb-5">
+      <a href="#" (click)="addVideo()" class="btn btn-success">Dodaj</a>
+    </div>
+    <div class="mt-2 mb-5 sort">
+      <a href="#" (click)="sort('desc')" class="btn btn-success">Desc</a>
+      <a href="#" (click)="sort('asc')" class="btn btn-success">Asc</a>
+    </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let video of videos | filter : searchText; index as i; ">
+      <app-video
+      (videoToDelete)="deleteVideo($event)"
+      (updateVideo)="updateVideo($event)"
+      [video]="video"></app-video>
+    </div>
+  </div>
+</div>
