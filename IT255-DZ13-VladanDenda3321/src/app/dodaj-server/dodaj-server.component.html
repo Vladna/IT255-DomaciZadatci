@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+     
+      <label>Server ime</label>
+      
+      <input
+        type="text"
+        class="form-control"
+        #serverNameInput>
+      <label>Server vrednost</label>
+       
+      <input
+        type="text"
+        class="form-control"
+        #serverContentInput>
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddServer(serverNameInput)">dodaj Server</button>
+     
+    </div>
+  </div>
+  
